@@ -1,9 +1,4 @@
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  console.log(params);
-  const { id } = await params;
-  return <div></div>;
+export default async function Page({ params }: { params: { id: string } }) {
+  const { id } = params;
+  return <div>Book ID: {id}</div>;
 }
